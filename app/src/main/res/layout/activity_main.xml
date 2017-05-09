@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:alpha="0.75"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.android.project231.MainActivity">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/activity_main"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="16dp"
+                    android:text="Me"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="28dp" />
+
+                <TextView
+                    android:id="@+id/meScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="20"
+                    android:textColor="@android:color/white"
+                    android:textSize="56sp" />
+
+                <Button
+                    android:id="@+id/addOneMe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="8dp"
+                    android:onClick="addOneMe"
+                    android:text="+1" />
+
+                <Button
+                    android:id="@+id/loseOneMe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="18dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:onClick="loseOneMe"
+                    android:text="-1" />
+
+                <Button
+                    android:id="@+id/resetMe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="8dp"
+                    android:onClick="resetMe"
+                    android:text="Reset" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/darker_gray"></View>
+
+            <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+                android:id="@id/activity_main"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="16dp"
+                    android:text="You"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="28dp" />
+
+                <TextView
+                    android:id="@+id/youScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="20"
+                    android:textColor="@android:color/white"
+                    android:textSize="56sp" />
+
+                <Button
+                    android:id="@+id/addOneYou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="8dp"
+                    android:onClick="addOneYou"
+                    android:text="+1" />
+
+                <Button
+                    android:id="@+id/loseOneYou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="18dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:onClick="loseOneYou"
+                    android:text="-1" />
+
+                <Button
+                    android:id="@+id/resetYou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="8dp"
+                    android:onClick="resetYou"
+                    android:text="Reset" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/tick1me"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="25dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/tick"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/tick2me"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@+id/tick1me"
+                android:scaleType="fitCenter"
+                android:src="@drawable/tick"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/tick3me"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@+id/tick2me"
+                android:scaleType="fitCenter"
+                android:src="@drawable/tick"
+                android:visibility="invisible" />
+
+
+            <ImageView
+                android:id="@+id/tick1you"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="25dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/tick"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/tick2you"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="25dp"
+                android:layout_toLeftOf="@+id/tick1you"
+                android:scaleType="fitCenter"
+                android:src="@drawable/tick"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/tick3you"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="25dp"
+                android:layout_toLeftOf="@+id/tick2you"
+                android:scaleType="fitCenter"
+                android:src="@drawable/tick"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/iWin"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tick2me"
+                android:layout_marginTop="25dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/win"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/youWin"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tick2you"
+                android:layout_marginTop="25dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/win"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/youLoose"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tick1you"
+                android:layout_marginTop="25dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/loose"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/iLoose"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tick2me"
+                android:layout_marginTop="25dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/loose"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/resetAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="32dp"
+                android:onClick="resetAll"
+                android:text="Reset All" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
